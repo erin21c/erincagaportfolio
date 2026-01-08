@@ -1,0 +1,216 @@
+<!--
+PROJECT PAGE TEMPLATE (2 photos, text, 2 photos, text)
+
+IMAGE SIZE GUIDE (recommended)
+1) Section photos (the two-photo rows):
+   - Use the SAME aspect ratio for consistency.
+   - Recommended: 1600×1000 px (8:5) OR 1600×1067 (3:2) OR 1600×900 (16:9)
+   - Keep each image ideally < 700 KB.
+
+2) Filenames:
+   Put images in:
+     /assets/projects/continuum/
+   Example:
+     /assets/projects/continuum/01.png
+     /assets/projects/continuum/02.png
+     /assets/projects/continuum/03.png
+     /assets/projects/continuum/04.png
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tendon-Driven Continuum Robot — Erin Caga</title>
+  <meta name="description" content="Tendon-driven continuum robot project page." />
+
+  <!-- Use the same global stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Small page-specific styling only -->
+  <style>
+    .project-wrap { max-width: 980px; margin: 0 auto; padding: 10px 18px 56px; }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 0 10px;
+    }
+
+    .backlink {
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .backlink:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+
+    .title {
+      margin: 10px 0 6px;
+      font-size: 1.9rem;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .block {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(242,242,243,0.03);
+      overflow: hidden;
+    }
+
+    /* Two-photo row */
+    .two-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px;
+      background: rgba(242,242,243,0.02);
+    }
+
+    .two-photos figure {
+      margin: 0;
+      border-radius: calc(var(--radius) - 6px);
+      overflow: hidden;
+      background: rgba(242,242,243,0.05);
+      border: 1px solid var(--line);
+    }
+
+    .two-photos img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 10; /* choose one ratio and keep consistent across images */
+    }
+
+    /* Text block under the photos */
+    .text {
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+    }
+    .text h2 {
+      margin: 0 0 10px;
+      font-size: 0.98rem;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--muted);
+    }
+    .text p {
+      margin: 0 0 10px;
+    }
+    .text p:last-child { margin-bottom: 0; }
+
+    /* Responsive: stack images on small screens */
+    @media (max-width: 760px) {
+      .two-photos { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Reuse your minimal topbar style from the homepage -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <a class="site-name" href="main.html" aria-label="Home">
+        <img src="assets/sitename.png" alt="Erin Çağa" width="300" height="81" />
+      </a>
+    
+  </header>
+
+  <main class="project-wrap">
+    <div class="project-header">
+      <a class="backlink" href="main.html">← Back</a>
+     
+    </div>
+
+    
+    <h1 class="title">MENG233 Rigid Body Dynamics group project</h1>
+    <h1 class="title">Tendon-Driven Continuum Robot</h1>
+    <p class="subtitle">By Erin Bilgin Çağa, Anıl Eray Özden, Mehmet Alper Fidan, İskender Baydan</p>
+
+    <!-- BLOCK 1: 2 photos, then text -->
+    <section class="block">
+      <div class="two-photos">
+        <figure>
+          <img src="assets/thumb1.png" alt="Continuum robot photo 1" />
+        </figure>
+        <figure>
+          <img src="assets/thumb2.png" alt="Continuum robot photo 2" />
+        </figure>
+      </div>
+
+      <div class="text">
+        <h2>Overview</h2>
+        <p>
+          ⠀⠀⠀This project explores the design and prototyping of a tendon-driven continuum robot, a class of robots inspired by biological structures such as octopus arms and elephant trunks. Unlike traditional rigid-link manipulators, this robot is capable of continuous bending, allowing it to adapt its shape to the environment.
+
+The primary task of the robot is to reach, orient, and manipulate objects in confined or irregular spaces where conventional articulated robots are inefficient or unsafe. Such capabilities are especially relevant for inspection, search-and-rescue, and soft manipulation tasks where compliance and adaptability are critical.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOCK 2: 2 photos, then text -->
+    <section class="block">
+      <div class="two-photos">
+        <figure>
+          <img src="assets/thumb3.png" alt="Continuum robot photo 3" />
+        </figure>
+        <figure>
+          <img src="assets/thumb4.png" alt="Continuum robot photo 4" />
+        </figure>
+      </div>
+
+      <div class="text">
+        <h2>Designed and Built by</h2>
+        <p><strong>Erin Bilgin Çağa</strong></p>
+        <p><strong>Anıl Eray Özden</strong></p>
+        <p><strong>Mehmet Alper Fidan</strong></p>
+        <p><strong>İskender Baydan</strong></p>
+
+        <p>⠀⠀</p>
+        <p>⠀⠀⠀The prototype was designed as a single-segment continuum structure driven by peripheral tendons. All structural components were 3D printed in PETG, selected for its heat resistance and durability. An infill density of 40% was used to balance structural stiffness and weight while maintaining reliable tendon guidance.
+          To avoid restricting the robot’s curvature, the central backbone was implemented using silicone, allowing unrestricted bending without imposing a preferred shape. Tendon routing was achieved using bike brake cables, chosen for their high tensile strength, low elongation, and availability.
+        </p>
+        <p>⠀⠀⠀Actuation was achieved using three 360-degree metal-geared servo motors, each responsible for controlling an individual tendon. A micro 180-degree metal-geared servo motor was used to actuate the end-effector gripper.
+          All motors were selected with metal gear trains to improve durability under continuous load and repeated bending cycles. The system was controlled using an Arduino Uno, programmed in C++, enabling real-time control of tendon tension and gripper actuation.
+        </p>
+
+        <p>⠀⠀⠀The entire prototype was modeled in SolidWorks prior to fabrication, allowing validation of component fit, tendon routing, and overall geometry. This modeling step reduced assembly errors and supported rapid iteration of design parameters.
+          From a robotics perspective, this system falls within the domain of soft robotics, where compliance is intentionally introduced to improve safety, adaptability, and interaction with unstructured environments. By combining rigid printed elements with flexible silicone and tendon actuation, the robot exhibits characteristics of both continuum and soft robotic systems.
+          This hybrid approach demonstrates how relatively simple hardware and control strategies can be used to realize complex, bio-inspired motion.
+</p>
+    </section>
+
+    <!-- OPTIONAL: add more blocks by copying the same pattern -->
+    <!--
+    <section class="block">
+      <div class="two-photos">
+        <figure><img src="/assets/projects/continuum/05.png" alt="..." /></figure>
+        <figure><img src="/assets/projects/continuum/06.png" alt="..." /></figure>
+      </div>
+      <div class="text">
+        <h2>Modeling</h2>
+        <p>Explain constant curvature and tendon length difference mapping.</p>
+      </div>
+    </section>
+    -->
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Erin Çağa</span>
+      <span class="footer-sep">—</span>
+      <a href="mailto:erinbilgincaga@gmail.com">erinbilgincaga@gmail.com</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
